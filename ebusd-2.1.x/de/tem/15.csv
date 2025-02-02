@@ -298,7 +298,7 @@ r,,anlage_temp,Anlagetemperatur 00-107 (00-096),,,,000e0050,parameters,,paramete
 # Wärmemanager Menü Soll-Ist MasterFB,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 *r,wm_stat,,,,15,0621,7a,,,,,,,,,,,,,,,,,,,,,,,,
 r,,puffer_temp_oben,Puffertemperatur oben 00-015,,,,800010,parameters,,parameter_temp10,,,,temp,,temp10,,,Obere Heizungspuffer Temperatur (Einschalttemperatur),,,,,,,,,,,,
-r,,anlage_solltemp_ww,Anlage Sollwert Warmwasserbetrieb 01-097,,,,810010,parameters,,parameter_temp1,,,,temp,,temp1,,,Berechneter Sollwert für die Anlagenvorlauftemperatur Warmwasser Ladebetrieb,,,,,,,,,,,,
+r,,anlage_solltemp_ww,Anlage Sollwert Warmwasserbetrieb 01-097,,,,810010,parameters,,parameter_temp10,,,,temp,,temp10,,,Berechneter Sollwert für die Anlagenvorlauftemperatur Warmwasser Ladebetrieb,,,,,,,,,,,,
 r,,anlage_temp,Anlagetemperatur 00-107,,,,820010,parameters,,parameter_temp10,,,,temp,,temp10,,,Anlagen Vorlauftemperatur für Heizbetrieb (Verteiler),,,,,,,,,,,,
 r,,anlage_solltemp_heizung,Anlagetemperatur Sollwert 01-107,,,,830010,parameters,,parameter_temp10,,,,temp,,temp10,,,Berechneter Sollwert für die Anlagenvorlauftemperatur Heizbetrieb,,,,,,,,,,,,
 r,,leistung_heizung,Heizleistung Heizbetrieb 02-040,,,,840010,parameters,,parameter1_10,,,,temp,,SIN,10,kW,Berechnete Gesamtheizleistung,,,,,,,,,,,,
