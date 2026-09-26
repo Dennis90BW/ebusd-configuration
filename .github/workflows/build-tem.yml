@@ -21,6 +21,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Show installed versions
+        run: |
+          npm list @ebusd/ebus-typespec @typespec/compiler
+          node -e "console.log(require('@typespec/compiler/package.json').version)"
+          node -e "console.log(require('@ebusd/ebus-typespec/package.json').version)"
+
       - name: Build German configuration
         run: npm run compile-de
 
