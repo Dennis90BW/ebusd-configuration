@@ -28,8 +28,40 @@ jobs:
       - name: Build German configuration
         run: npm run compile-de
 
-      - name: Upload generated CSV
+      - name: Find generated files
+        run: |
+          echo "================================"
+          echo "=== CSV-DATEIEN ================"
+          echo "================================"
+          find . -type f -name "*.csv" -print
+
+          echo ""
+          echo "================================"
+          echo "=== TEM-DATEIEN ================"
+          echo "================================"
+          find . -type f | grep -i "tem" || true
+
+          echo ""
+          echo "================================"
+          echo "=== OUTCSV.DE ==================="
+          echo "================================"
+          if [ -d "outcsv.de" ]; then
+            find outcsv.de -maxdepth 10 -type f -print
+          else
+            echo "outcsv.de existiert nicht"
+          fi
+
+          echo ""
+          echo "================================"
+          echo "=== VERZEICHNISSE ==============="
+          echo "================================"
+          find . -maxdepth 5 -type d -print | sort
+
+      - name: Upload generated files
         uses: actions/upload-artifact@v6
         with:
           name: ebusd-config-de
-          path: outcsv.de/
+          path: |
+            outcsv.de/
+            **/*.csv
+          if-no-files-found: error
