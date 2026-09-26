@@ -1,0 +1,32 @@
+name: Build ebusd configuration
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: tem
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build German configuration
+        run: npm run compile-de
+
+      - name: Upload generated CSV
+        uses: actions/upload-artifact@v4
+        with:
+          name: ebusd-config-de
+          path: outcsv.de/
