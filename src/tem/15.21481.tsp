@@ -6,9 +6,8 @@ using Ebus.Dtm;
 using Ebus.Str;
 namespace Tem;
 
-namespace _15 {
-  // Bartl WP Eco 6S-HG from PR 129
-// Local variant for TEM scan ID 21481 / SW 0594 / HW 0102; derived from local 15-3.csv changes
+namespace _15_21481 {
+  // Bartl WP Eco 6 LI-C/HG
   // Globalfunktionen Menü Einstellungen MasterFB (Fachmann)
   // Passwort etc.
   // Wärmepumpe Ping für MasterFB Display
